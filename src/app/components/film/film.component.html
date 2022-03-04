@@ -1,0 +1,5 @@
+<div class="container">
+  <button (click)="saveFilm(film.id)" class="save_film">Save</button>
+  <img [src]="film.poster" alt="poster" class="poster">
+  <div class="title">{{film.title || film.ruTitle}}</div>
+</div>

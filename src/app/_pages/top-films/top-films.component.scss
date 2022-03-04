@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  background-color: gray;
+}
+
+app-film {
+  margin: 2rem 2rem;
+}

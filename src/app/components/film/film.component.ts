@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Movie } from '../../../interface/movie.interface';
+import { StorageService } from 'src/app/services/storage.service';
+import { Movie } from '../../interface/movie.interface';
 
 @Component({
   selector: 'app-film',
@@ -9,7 +10,11 @@ import { Movie } from '../../../interface/movie.interface';
 export class FilmComponent implements OnInit {
   @Input() film!: Movie;
 
-  constructor() {}
+  constructor(private storageService: StorageService) {}
+
+  saveFilm(id: number) {
+    this.storageService.save_film(id);
+  }
 
   ngOnInit(): void {}
 }

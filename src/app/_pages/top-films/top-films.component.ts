@@ -19,16 +19,7 @@ export class TopFilmsComponent implements OnInit {
 
   ngOnInit(): void {
     this.topFilmsService.get_films().subscribe((data: any) => {
-      const { items } = data;
-      this.moviesList = items.map((val: any) => {
-        return {
-          id: val.kinopoiskId,
-          title: val.nameOriginal,
-          ruTitle: val.nameRu,
-          poster: val.posterUrl,
-        };
-      });
-      console.log(items);
+      this.moviesList = this.topFilmsService.pars_responce(data);
     });
   }
 }

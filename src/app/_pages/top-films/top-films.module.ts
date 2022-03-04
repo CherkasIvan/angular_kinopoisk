@@ -3,8 +3,9 @@ import { CommonModule } from '@angular/common';
 import { TopFilmsRoutingModule } from './top-films-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { TopFilmsService } from '../../services/top-films.service';
-import { SharedModule } from '../shared/film/shared.module';
+import { SharedModule } from '../../components/film/shared.module';
 import { TopFilmsComponent } from './top-films.component';
+import { NavBarModule } from '../../components/nav-bar/nav-bar.module';
 
 @NgModule({
   declarations: [TopFilmsComponent],
@@ -13,6 +14,7 @@ import { TopFilmsComponent } from './top-films.component';
     TopFilmsRoutingModule,
     HttpClientModule,
     SharedModule,
+    NavBarModule,
   ],
   providers: [TopFilmsService],
 })

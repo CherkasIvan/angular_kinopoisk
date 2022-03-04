@@ -1,0 +1,3 @@
+<div class="container">
+  <button *ngFor="let button of navButtons" (click)="navigate(button.path)" class="nav">{{button.buttonName}}</button>
+</div>

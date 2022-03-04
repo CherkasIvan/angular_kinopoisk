@@ -5,7 +5,6 @@ import { map, Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-
 export class TopFilmsService {
   response: any;
 
@@ -19,5 +18,18 @@ export class TopFilmsService {
     headers = headers.append('Content-Type', 'application/json');
 
     return (this.response = this.http.get(baseURL, { headers }));
+  }
+
+  pars_responce(data: any) {
+    const { items } = data;
+    return items.map((val: any) => {
+      return {
+        id: val.kinopoiskId,
+        title: val.nameOriginal,
+        ruTitle: val.nameRu,
+        poster: val.posterUrl,
+      };
+    });
+    console.log(items);
   }
 }
