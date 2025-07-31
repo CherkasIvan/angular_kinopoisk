@@ -12,9 +12,5 @@ export class FilmComponent implements OnInit {
 
   constructor(private storageService: StorageService) {}
 
-  saveFilm(id: number) {
-    this.storageService.save_film(id);
-  }
-
   ngOnInit(): void {}
 }

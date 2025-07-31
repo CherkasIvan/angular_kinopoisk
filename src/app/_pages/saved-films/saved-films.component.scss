@@ -1,0 +1,11 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: fit-content;
+  background-color: chocolate;
+  min-height: 100vh;
+}
+
+app-film {
+  margin: 2rem 2rem;
+}

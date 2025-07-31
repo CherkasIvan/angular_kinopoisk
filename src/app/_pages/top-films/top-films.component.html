@@ -1,4 +1,5 @@
 <div class="container">
   <app-film *ngFor="let film of moviesList" [film]="film">
+    <button (click)="saveFilm(film.id)" class="save_film">Save</button>
   </app-film>
 </div>
