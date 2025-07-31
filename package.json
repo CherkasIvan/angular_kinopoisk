@@ -1,5 +1,5 @@
 {
-  "name": "ngrx",
+  "name": "angular_kinopoisk",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
